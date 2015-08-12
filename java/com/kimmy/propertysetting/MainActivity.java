@@ -37,12 +37,7 @@ public class MainActivity extends Activity {
         //spinner
         spinner = (Spinner)findViewById(R.id.spinner);
         propList = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, property);
-        /*
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.property_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        */
-        //Settings.Global.putLong();
+        
         spinner.setAdapter(propList);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
@@ -134,20 +129,7 @@ public class MainActivity extends Activity {
             return property;
         }
     }
-    /*
-    public static void printMessage() {
-        String userName = System.getProperty("user.name");
-        String programName = System.getProperty("program.name");
-        String programVersion = System.getProperty("program.version");
-        String ioTempDir = System.getProperty("java.io.tmpdir");
-        System.out.println("Hello "+userName+",");
-        System.out.println("");
-        System.out.println("Welcome to \""+programName+", "
-                +programVersion+"\".");
-        System.out.println("Note that the Java I/O "
-                +" temporary directory is located at "+ioTempDir+".");
-    }
-    */
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
